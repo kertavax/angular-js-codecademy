@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <head>
 	<title>Codecademy AngularJS</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
-	<h1>Codecademy AngularJS</h1>
+<body ng-app="myApp">
+	<div class="main" ng-controller="MainController">
+		<h1>{{ title }}</h1>
+		<h2>{{ author }}</h2>
+		<p>{{ product.name | uppercase }}</p>
+		<p>{{ product.price | currency }}</p>
+		<p>{{ product.pubdate | date }}</p>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/MainController.js"></script>
 </body>
 </html>
