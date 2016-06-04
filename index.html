@@ -7,9 +7,9 @@
 	<div class="main" ng-controller="MainController">
 		<h1>{{ title }}</h1>
 		<h2>{{ author }}</h2>
-		<p>{{ product.name | uppercase }}</p>
-		<p>{{ product.price | currency }}</p>
-		<p>{{ product.pubdate | date }}</p>
+		<p>{{ products[1].name | uppercase }}</p>
+		<p>{{ products[1].price | currency }}</p>
+		<p>{{ products[1].pubdate | date }}</p>
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/controllers/MainController.js"></script>
