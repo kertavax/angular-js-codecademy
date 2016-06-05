@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<title>Codecademy AngularJS</title>
+</head>
+<body ng-app="myApp">
+	<div class="main" ng-controller="MainController">
+		<div class="card" ng-repeat="app in apps"> 
+			<app-info info="app"></app-info> 
+		</div>
+	</div>
+
+	<!-- Modules -->
+    <script src="js/main.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
+
+    <!-- Directives -->
+    <script type="text/javascript" src="js/directives/appInfo.js"></script>
+
+</body>
+</html>
