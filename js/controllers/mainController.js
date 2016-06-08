@@ -1,5 +1,8 @@
-app.controller('MainController', ['$scope', function($scope) {
-	$scope.apps = [
+app.controller('MainController', ['$scope', 'forecast', function($scope, forecast) {
+	forecast.success(function(data) {
+    	$scope.fiveDay = data;
+  	});
+	/*$scope.apps = [ //without forecast service
 		{
 			icon: 'img/move.jpg',
 			title: 'MOVE',
@@ -18,5 +21,5 @@ app.controller('MainController', ['$scope', function($scope) {
 			developer: 'Armando P.',
 			price: 1.99
 		}
-	]
+	]*/
 }]);

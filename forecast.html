@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript" src="js/libs/angular-1-5-6.min.js"></script>
+	<title>Codecademy AngularJS – Forecast</title>
+</head>
+<body ng-app="myApp">
+	<div class="main" ng-controller="MainController">
+		<div class="item">
+			<h1>{{ fiveDay.city_name }}</h1>
+			<h2>Five Day Forecast</h2>
+			<div class="forecast" ng-repeat="day in fiveDay.days">
+				<!-- datetime -->
+                <div class="weekday col-xs-4">
+                	{{ day.datetime | date }}
+                </div>
+
+
+                <!-- icon -->
+                <div class="weather col-xs-3">
+                	<img ng-src="{{ day.icon }}" alt="">
+                </div>
+
+                <div class="col-xs-1"></div>
+
+
+                <!-- high -->
+                <div class="high col-xs-2">
+					High: {{ day.high }}
+                </div>
+
+
+                <!-- low -->
+                <div class="low col-xs-2">
+					Low: {{ day.low }}
+                </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modules -->
+    <script src="js/main.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/forecast.js"></script>
+
+    <!-- Directives -->
+    <script type="text/javascript" src="js/directives/appInfo.js"></script>
+
+</body>
+</html>
