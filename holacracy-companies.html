@@ -1,0 +1,15 @@
+<html ng-app="holacracyLister">
+<head>
+	<script src="js/libs/angular-1-5-6.min.js"></script>	
+	<title>Holacracy-run Companies</title>
+</head>
+<body ng-controller="HolacracyController as holacracy">
+	<div ng-repeat="company in holacracy.companies">
+		<a ng-href="{{ company.url }}">
+			<h1>{{ company.name }}</h1>
+		</a>
+		<h3>{{ company.place }}</h3>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>
