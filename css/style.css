@@ -1,0 +1,11 @@
+ul li {
+  display: inline; }
+
+textarea, label {
+  display: block; }
+
+.active {
+  background-color: #666;
+  color: #ddd; }
+
+/*# sourceMappingURL=style.css.map */
